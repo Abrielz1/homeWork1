@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "02ae037a-047d-4c6d-8d80-d3b1bec4b36b",
+		"name": "homeWork",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24040827"
+	},
+	"item": [
+		{
+			"name": "Java",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseurl}}?{{description}}=Java&{{location}}=moscow",
+					"protocol": "https",
+					"host": [
+						"{{baseurl}}"
+					],
+					"query": [
+						{
+							"key": "{{description}}",
+							"value": "Java"
+						},
+						{
+							"key": "{{location}}",
+							"value": "moscow"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Python",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseurl}}?{{description}}=Python&{{location}}=moscow",
+					"protocol": "https",
+					"host": [
+						"{{baseurl}}"
+					],
+					"query": [
+						{
+							"key": "{{description}}",
+							"value": "Python"
+						},
+						{
+							"key": "{{location}}",
+							"value": "moscow"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ruby",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseurl}}?{{description}}=Ruby&{{location}}=moscow",
+					"protocol": "https",
+					"host": [
+						"{{baseurl}}"
+					],
+					"query": [
+						{
+							"key": "{{description}}",
+							"value": "Ruby"
+						},
+						{
+							"key": "{{location}}",
+							"value": "moscow"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl\n",
+			"value": "https://raw.githubusercontent.com/skillbox-java/JavaEE/main/positions.json",
+			"type": "string"
+		},
+		{
+			"key": "description\n",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "location",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
