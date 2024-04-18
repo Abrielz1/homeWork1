@@ -14,14 +14,38 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>3.0.1-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>
+                sling
+            </id>
+            <name>
+                maven-checkstyle-plugin
+            </name>
+        <url>
+            https://repository.apache.org/content/repositories/snapshots
+        </url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.3.1</version>
+
                 <configuration>
+
                     <configLocation>checkstyle.xml</configLocation>
                 </configuration>
                 <executions>
@@ -32,6 +56,7 @@
                             <goal>check</goal>
                         </goals>
                     </execution>
+
                 </executions>
             </plugin>
         </plugins>
