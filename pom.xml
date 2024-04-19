@@ -14,54 +14,31 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>apache-repo</id>
+            <name>apache</name>
+            <url>https://repository.apache.org/content/repositories/snapshots</url>
+        </repository>
+    </repositories>
 
     <build>
-
         <plugins>
-
             <plugin>
-
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>3.0.1-SNAPSHOT</version>
-
-                <configuration>
-                    <configLocation>checkstyle.xml</configLocation>
-                </configuration>
-
                 <executions>
-
                     <execution>
-                        <id>check</id>
-                        <phase>compile</phase>
+                        <id>validate</id>
+                        <phase>validate</phase>
                         <goals>
                             <goal>check</goal>
                         </goals>
                     </execution>
-
                 </executions>
-
             </plugin>
-
         </plugins>
-
     </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-checkstyle-plugin</artifactId>
-            <version>3.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>maven-checkstyle-plugin</id>
-            <name>maven-checkstyle-plugin</name>
-            <url>https://repository.apache.org/content/repositories/snapshots/</url>
-            <snapshots></snapshots>
-        </pluginRepository>
-    </pluginRepositories>
 
 </project>
